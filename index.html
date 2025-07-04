@@ -5,21 +5,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>My Academic Projects</title>
   <style>
-    body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; }
-    h1, h2 { color: #333; }
-    .section { margin-bottom: 30px; }
+    body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; }
+    header { padding: 20px; background-color: #f9f9f9; }
+    h1, h2 { color: #333; margin: 0 0 10px 0; }
+    .section { padding: 20px; margin-bottom: 30px; }
     ul { list-style: none; padding: 0; }
     li { margin-bottom: 5px; }
     a { color: #007acc; text-decoration: none; }
     a:hover { text-decoration: underline; }
+
+    nav {
+      position: sticky;
+      top: 0;
+      background-color: #ffffff;
+      border-bottom: 1px solid #ccc;
+      padding: 10px 20px;
+      z-index: 1000;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav li {
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
-  <h1>My Academic Projects</h1>
-  <p>Welcome! Here you can find a collection of projects developed throughout my academic journey, organized by degree and course.</p>
+
+  <header>
+    <h1>My Academic Projects</h1>
+    <p>Welcome! Here you can find a collection of projects developed throughout my academic journey, organized by degree and course.</p>
+  </header>
+
+  <!-- Menu de navegação fixo -->
+  <nav>
+    <ul>
+      <li><a href="#bachelor">Bachelor's Degree</a></li>
+      <li><a href="#master">Master's Degree</a></li>
+    </ul>
+  </nav>
 
   <!-- Bachelor's Degree -->
-  <div class="section">
+  <div class="section" id="bachelor">
     <h2>Bologna Degree in Mechanical Engineering</h2>
     <ul>
       <li><strong>Technical Drawing and Geometrical Modelling I</strong>: <a href="https://github.com/Pedro1805/Technical-Drawing-and-Geometrical-Modelling-I" target="_blank">Kart Modelling</a></li>
@@ -32,7 +65,7 @@
   </div>
 
   <!-- Master's Degree -->
-  <div class="section">
+  <div class="section" id="master">
     <h2>Bologna Master Degree in Energy Engineering and Management</h2>
     <ul>
       <li><strong>Solar Thermal Energy</strong>: <a href="https://github.com/Pedro1805/Solar-Thermal-Energy" target="_blank">Comparison of the Performance of Flat Thermal Solar Collectors + Solar Thermal System Optimization</a></li>
@@ -50,5 +83,6 @@
       <li><strong>Waste to Energy</strong>: <a href="https://github.com/Pedro1805/Waste-to-Energy" target="_blank">The Role of Waste to Energy in the Circular Economy</a></li>
     </ul>
   </div>
+
 </body>
 </html>
