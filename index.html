@@ -5,14 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>My Academic Projects</title>
   <style>
-    body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; }
-    header { padding: 20px; background-color: #f9f9f9; }
-    h1, h2 { color: #333; margin: 0 0 10px 0; }
-    .section { padding: 20px; margin-bottom: 30px; }
-    ul { list-style: none; padding: 0; }
-    li { margin-bottom: 5px; }
-    a { color: #007acc; text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+      color: #000000;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    header {
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+
+    h1, h2 {
+      color: #333;
+      margin: 0 0 10px 0;
+    }
 
     nav {
       position: sticky;
@@ -34,6 +45,65 @@
     nav li {
       font-weight: bold;
     }
+
+    .section {
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+
+    .project-card {
+      background: #f9f9f9;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 15px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    }
+
+    a {
+      color: #007acc;
+      text-decoration: none;
+      transition: color 0.2s ease-in-out;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color: #005f99;
+    }
+
+    /* Dark Mode */
+    .dark-mode {
+      background-color: #1e1e1e;
+      color: #f0f0f0;
+    }
+
+    .dark-mode a {
+      color: #80d0ff;
+    }
+
+    .dark-mode nav {
+      background-color: #2a2a2a;
+      border-color: #444;
+    }
+
+    .dark-mode .project-card {
+      background: #2c2c2c;
+      box-shadow: 0 0 8px rgba(255,255,255,0.05);
+    }
+
+    .toggle-btn {
+      margin: 10px 20px;
+      padding: 6px 12px;
+      font-size: 14px;
+      background: #007acc;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .toggle-btn:hover {
+      background: #005f99;
+    }
   </style>
 </head>
 <body>
@@ -42,6 +112,9 @@
     <h1>My Academic Projects</h1>
     <p>Welcome! Here you can find a collection of projects developed throughout my academic journey, organized by degree and course.</p>
   </header>
+
+  <!-- Botão de modo escuro -->
+  <button class="toggle-btn" onclick="document.body.classList.toggle('dark-mode')">🌓 Toggle Dark Mode</button>
 
   <!-- Menu de navegação fixo -->
   <nav>
@@ -54,34 +127,32 @@
   <!-- Bachelor's Degree -->
   <div class="section" id="bachelor">
     <h2>Bologna Degree in Mechanical Engineering</h2>
-    <ul>
-      <li><strong>Technical Drawing and Geometrical Modelling I</strong>: <a href="https://github.com/Pedro1805/Technical-Drawing-and-Geometrical-Modelling-I" target="_blank">Kart Modelling</a></li>
-      <li><strong>Technical Drawing and Geometrical Modelling II</strong>: <a href="https://github.com/Pedro1805/-Technical-Drawing-and-Geometrical-Modelling-II" target="_blank">Innovative Fridge Modelling</a></li>
-      <li><strong>Manufacturing Processes I</strong>: <a href="https://github.com/Pedro1805/Manufacturing-Processes-I" target="_blank">Assessing the Production of an Object</a></li>
-      <li><strong>Manufacturing Processes II</strong>: <a href="https://github.com/Pedro1805/Manufacturing-Processes-II" target="_blank">Evaluating the Manufacturing of an Object</a></li>
-      <li><strong>Fluid Mechanics</strong>: <a href="https://github.com/Pedro1805/Fluid-Mechanics-II" target="_blank">2D Turbulent Boundary Layer over a Flat Plate</a></li>
-      <li><strong>Computational Mechanics</strong>: <a href="https://github.com/Pedro1805/Computational-Mechanics" target="_blank">2D FEM Implementation for Plane Stress Problems</a></li>
-    </ul>
+
+    <div class="project-card"><strong>Technical Drawing and Geometrical Modelling I</strong>: <a href="https://github.com/Pedro1805/Technical-Drawing-and-Geometrical-Modelling-I" target="_blank">Kart Modelling</a></div>
+    <div class="project-card"><strong>Technical Drawing and Geometrical Modelling II</strong>: <a href="https://github.com/Pedro1805/-Technical-Drawing-and-Geometrical-Modelling-II" target="_blank">Innovative Fridge Modelling</a></div>
+    <div class="project-card"><strong>Manufacturing Processes I</strong>: <a href="https://github.com/Pedro1805/Manufacturing-Processes-I" target="_blank">Assessing the Production of an Object</a></div>
+    <div class="project-card"><strong>Manufacturing Processes II</strong>: <a href="https://github.com/Pedro1805/Manufacturing-Processes-II" target="_blank">Evaluating the Manufacturing of an Object</a></div>
+    <div class="project-card"><strong>Fluid Mechanics</strong>: <a href="https://github.com/Pedro1805/Fluid-Mechanics-II" target="_blank">2D Turbulent Boundary Layer over a Flat Plate</a></div>
+    <div class="project-card"><strong>Computational Mechanics</strong>: <a href="https://github.com/Pedro1805/Computational-Mechanics" target="_blank">2D FEM Implementation for Plane Stress Problems</a></div>
   </div>
 
   <!-- Master's Degree -->
   <div class="section" id="master">
     <h2>Bologna Master Degree in Energy Engineering and Management</h2>
-    <ul>
-      <li><strong>Solar Thermal Energy</strong>: <a href="https://github.com/Pedro1805/Solar-Thermal-Energy" target="_blank">Comparison of the Performance of Flat Thermal Solar Collectors + Solar Thermal System Optimization</a></li>
-      <li><strong>Photovoltaic Solar Energy</strong>: <a href="https://github.com/Pedro1805/Photovoltaic-Solar-Energy" target="_blank">Modelling and Error Analysis of Irradiance on Tilted Surfaces + Experimental Characterization of Solar Cells + Performance Comparison between PVGIS and 1-Diode Models</a></li>
-      <li><strong>Energy and Sustainability</strong>: <a href="https://github.com/Pedro1805/Energy-and-Sustainability" target="_blank">Different Geostrategies on the Path to 100% Renewability</a></li>
-      <li><strong>Energy Storage</strong>: <a href="https://github.com/Pedro1805/Energy-Storage-" target="_blank">Energy Storage for the Azores</a></li>
-      <li><strong>Energy Systems Management</strong>: <a href="https://github.com/Pedro1805/Energy-Systems-Management" target="_blank">Energy Management Tool for a Local Energy Community (GSEne CUP 2023)</a></li>
-      <li><strong>Engineering Project Management</strong>: <a href="https://github.com/Pedro1805/Engineering-Project-Management" target="_blank">Implementation of Solar Panel Systems on Lisbon-Cascais Train Stations</a></li>
-      <li><strong>Energy Services</strong>: <a href="https://github.com/Pedro1805/Energy-Services" target="_blank">Electricity Forecasting and Dashboard for IST + Renewable Energy Forecasting in Portugal</a></li>
-      <li><strong>Geothermal Energy</strong>: <a href="https://github.com/Pedro1805/Geothermal-Energy" target="_blank">Hot Dry Rock Geothermal Potential of a Site</a></li>
-      <li><strong>Project in Energy Engineering and Management 1</strong>: <a href="https://github.com/Pedro1805/Project-in-Energy-Engineering-and-Management-1" target="_blank">Energy Efficiency Measures for Decarbonization in Buildings</a></li>
-      <li><strong>Project in Energy Engineering and Management 2</strong>: <a href="https://github.com/Pedro1805/Project-in-Energy-Engineering-and-Management-2" target="_blank">The Impact of Solid-State Batteries on the Revolution of Mobility</a></li>
-      <li><strong>Air Quality Management and Climate Change</strong>: <a href="https://github.com/Pedro1805/Air-Quality-Management-and-Climate-Change" target="_blank">Air Quality Analysis at the IST Gym</a></li>
-      <li><strong>Nuclear Energy</strong>: <a href="https://github.com/Pedro1805/Nuclear-Energy" target="_blank">Nuclear Hydrogen Production: Techno-Economic Assessment</a></li>
-      <li><strong>Waste to Energy</strong>: <a href="https://github.com/Pedro1805/Waste-to-Energy" target="_blank">The Role of Waste to Energy in the Circular Economy</a></li>
-    </ul>
+
+    <div class="project-card"><strong>Solar Thermal Energy</strong>: <a href="https://github.com/Pedro1805/Solar-Thermal-Energy" target="_blank">Comparison of the Performance of Flat Thermal Solar Collectors + Solar Thermal System Optimization</a></div>
+    <div class="project-card"><strong>Photovoltaic Solar Energy</strong>: <a href="https://github.com/Pedro1805/Photovoltaic-Solar-Energy" target="_blank">Modelling and Error Analysis of Irradiance + Experimental Characterization + Performance Comparison</a></div>
+    <div class="project-card"><strong>Energy and Sustainability</strong>: <a href="https://github.com/Pedro1805/Energy-and-Sustainability" target="_blank">Different Geostrategies on the Path to 100% Renewability</a></div>
+    <div class="project-card"><strong>Energy Storage</strong>: <a href="https://github.com/Pedro1805/Energy-Storage-" target="_blank">Energy Storage for the Azores</a></div>
+    <div class="project-card"><strong>Energy Systems Management</strong>: <a href="https://github.com/Pedro1805/Energy-Systems-Management" target="_blank">Energy Management Tool for a Local Energy Community (GSEne CUP 2023)</a></div>
+    <div class="project-card"><strong>Engineering Project Management</strong>: <a href="https://github.com/Pedro1805/Engineering-Project-Management" target="_blank">Implementation of Solar Panel Systems on Lisbon-Cascais Train Stations</a></div>
+    <div class="project-card"><strong>Energy Services</strong>: <a href="https://github.com/Pedro1805/Energy-Services" target="_blank">Electricity Forecasting and Dashboard for IST + Renewable Energy Forecasting in Portugal</a></div>
+    <div class="project-card"><strong>Geothermal Energy</strong>: <a href="https://github.com/Pedro1805/Geothermal-Energy" target="_blank">Hot Dry Rock Geothermal Potential of a Site</a></div>
+    <div class="project-card"><strong>Project in Energy Engineering and Management 1</strong>: <a href="https://github.com/Pedro1805/Project-in-Energy-Engineering-and-Management-1" target="_blank">Energy Efficiency Measures for Decarbonization in Buildings</a></div>
+    <div class="project-card"><strong>Project in Energy Engineering and Management 2</strong>: <a href="https://github.com/Pedro1805/Project-in-Energy-Engineering-and-Management-2" target="_blank">The Impact of Solid-State Batteries on the Revolution of Mobility</a></div>
+    <div class="project-card"><strong>Air Quality Management and Climate Change</strong>: <a href="https://github.com/Pedro1805/Air-Quality-Management-and-Climate-Change" target="_blank">Air Quality Analysis at the IST Gym</a></div>
+    <div class="project-card"><strong>Nuclear Energy</strong>: <a href="https://github.com/Pedro1805/Nuclear-Energy" target="_blank">Nuclear Hydrogen Production: Techno-Economic Assessment</a></div>
+    <div class="project-card"><strong>Waste to Energy</strong>: <a href="https://github.com/Pedro1805/Waste-to-Energy" target="_blank">The Role of Waste to Energy in the Circular Economy</a></div>
   </div>
 
 </body>
